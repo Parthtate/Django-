@@ -1,0 +1,38 @@
+body {
+    background-color: #212121;
+    color: aliceblue;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #212121;
+}
+
+.header {
+    text-align: center;
+    font-size: 2em;
+}
+
+.outer {
+    background-color: rgb(228, 222, 214);
+
+}
+
+.inner {
+    color: rgb(10, 4, 15);
+    font-size: 2em;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    color: #212121;
+    font-size: 2em;
+
+
+}
+
