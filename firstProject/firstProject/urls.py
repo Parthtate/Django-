@@ -26,4 +26,6 @@ urlpatterns = [
     path('chai/', include('chaiapp.urls')),
 
 
+
+    path("__reload__/", include("django_browser_reload.urls")),
 ]

@@ -1,19 +1,23 @@
-{% load static %}
+{% load static tailwind_tags %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  {% tailwind_css %}
 </head>
-<body>
-    <div class='outer'>
-        <h2>About Django Framework</h2>
-        <div class='inner'>
-            <p>Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It's free and open source.
-            Ridiculously fast.</p>
-        </div>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+  <div class="bg-white max-w-2xl w-full p-8 rounded-2xl shadow-lg">
+    <h2 class="text-3xl font-bold text-blue-600 mb-4">About Django Framework</h2>
+    <div class="text-gray-700 text-lg leading-relaxed">
+      <p>
+        Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.
+        Built by experienced developers, it takes care of much of the hassle of web development, so you can focus
+        on writing your app without needing to reinvent the wheel. It's free and open source — ridiculously fast.
+      </p>
     </div>
+  </div>
 </body>
 </html>
