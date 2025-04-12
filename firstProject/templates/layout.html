@@ -1,5 +1,4 @@
 {% load static tailwind_tags %}
-
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -13,9 +12,9 @@
         {% endblock %}
     </title>
 </head>
-<body>
-    <h1 class="bg-green-500 flex items-center justify-center h-screen ">Chai aur django</h1>
-    <nav>This is basic Layout</nav>
-    {% block content %}{% endblock  %}
+<body class="bg-gray-900">
+   {% block content %}
+
+   {% endblock %}
 </body>
 </html>
