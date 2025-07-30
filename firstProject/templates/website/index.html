@@ -5,12 +5,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chai aur Django - Your Perfect Tea Journey</title>
     {% tailwind_css %}
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .chai-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
-<body>
-    <h1 class="bg-gray-500 flex items-center justify-center h-screen ">Chai aur django</h1>
+<body class="min-h-screen gradient-bg chai-pattern">
+    <!-- Navigation -->
+    <nav class="bg-white/10 backdrop-blur-md border-b border-white/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">☕</span>
+                    </div>
+                    <h1 class="text-white text-xl font-bold">Chai aur Django</h1>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="text-white/90 hover:text-white transition-colors duration-200">Home</a>
+                    <a href="/about/" class="text-white/90 hover:text-white transition-colors duration-200">About</a>
+                    <a href="/chai/" class="text-white/90 hover:text-white transition-colors duration-200">Our Teas</a>
+                    <a href="/contact/" class="text-white/90 hover:text-white transition-colors duration-200">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <main class="flex-1">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center fade-in">
+                <!-- Hero Content -->
+                <div class="floating mb-8">
+                    <div class="w-24 h-24 mx-auto bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/30">
+                        <span class="text-4xl">🍵</span>
+                    </div>
+                </div>
+                
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                    Welcome to Your
+                    <span class="text-orange-300">Perfect Tea</span>
+                    Journey
+                </h1>
+                
+                <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
+                    Discover the art of tea brewing, explore exotic flavors, and find your perfect cup. 
+                    From traditional masala chai to modern blends, we have something special for every tea lover.
+                </p>
 
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+                    <a href="/chai/" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                        Explore Our Teas
+                    </a>
+                    <a href="/chai/stores/" class="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm border border-white/30">
+                        Find Stores
+                    </a>
+                </div>
+
+                <!-- Features Grid -->
+                <div class="grid md:grid-cols-3 gap-8 mt-20">
+                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                        <div class="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">🌿</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3">Premium Quality</h3>
+                        <p class="text-white/80">Hand-picked tea leaves from the finest gardens, ensuring exceptional taste and aroma in every cup.</p>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                        <div class="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">🏪</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3">Multiple Locations</h3>
+                        <p class="text-white/80">Find our tea varieties at stores near you. Use our store locator to discover the closest location.</p>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                        <div class="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">⭐</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3">Customer Reviews</h3>
+                        <p class="text-white/80">Read authentic reviews from tea enthusiasts and share your own experience with our community.</p>
+                    </div>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-white/20">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-orange-300 mb-2">50+</div>
+                        <div class="text-white/80">Tea Varieties</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-orange-300 mb-2">25+</div>
+                        <div class="text-white/80">Store Locations</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-orange-300 mb-2">1000+</div>
+                        <div class="text-white/80">Happy Customers</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-orange-300 mb-2">5★</div>
+                        <div class="text-white/80">Average Rating</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/20 backdrop-blur-md border-t border-white/20 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="text-center text-white/70">
+                <p>&copy; 2025 Chai aur Django. Crafted with ❤️ for tea lovers everywhere.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
